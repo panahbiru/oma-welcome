@@ -34,7 +34,6 @@ cat << EOF
 			<li><a href="index.sh.htm">$menuindex</a></li>
 			<li><a href="news.sh.htm">$menunews</a></li>
 			<li><a href="conf.sh.htm">$menuconfigure</a></li>
-			<li><a href="choosemenuK.sh.htm">Kde menu</a></li>
 			<li><a href="apps-office.sh.htm">$menuapps</a></li>
 			<li><a href="community.sh.htm">$menucontribute</a></li>
 			<li><a href="about.sh.htm">$menuabout</a></li>
@@ -55,7 +54,7 @@ cat << EOF
 		 <br/>
 		 <article class="articles">
 			<p>
-				$you_are_using <span class="bold">$(head -1 /README |fmt -w 28|head -1)</span> codename <span class="bold">$(lsb_release -c | cut -d":" -f2)</span>
+				$you_are_using <span class="bold">$(head -1 /README |cut -d " " -f1-3)</span> codename <span class="bold">$(lsb_release -c | cut -d":" -f2)</span>
 				$with_kernel $(uname -r) 
 				$arch $(uname -i).
 			</p>
